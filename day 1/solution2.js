@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const filePath = "input 1-1.txt";
+const filePath = "input.txt";
 
 let total = 0;
 
