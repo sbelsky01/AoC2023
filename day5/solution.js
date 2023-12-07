@@ -72,7 +72,6 @@ const getDestRanges = (srcRange, mappings) => {
   rangeListIdx = mappings.findIndex((mapping) => srcRange.min < mapping.max);
   while (minPointer <= srcRange.max) {
     const mapRange = mappings[rangeListIdx];
-    // console.log(mapRange);
     if (!mapRange) {
       max = srcRange.max;
       offset = 0;
@@ -90,15 +89,12 @@ const getDestRanges = (srcRange, mappings) => {
     });
     minPointer = max + 1;
   }
-  // console.log("out of while");
   return newRanges;
 };
 
 const isInRange = (pointer, range) => {
   return pointer >= range.min && pointer <= range.max;
 };
-
-// const getDestRanges = (srcRange, mappings) => {
 //   let newRanges = [];
 //   let minPointer = srcRange.min;
 //   while (minPointer <= srcRange.max) {
