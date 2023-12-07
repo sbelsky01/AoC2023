@@ -1,6 +1,5 @@
 const fs = require("fs");
 const filePath = "input.txt";
-// const filePath = "testInput.txt";
 
 fs.readFile(filePath, "utf8", (err, data) => {
   console.log("Part 1: " + part1(data));
@@ -95,28 +94,3 @@ const getDestRanges = (srcRange, mappings) => {
 const isInRange = (pointer, range) => {
   return pointer >= range.min && pointer <= range.max;
 };
-//   let newRanges = [];
-//   let minPointer = srcRange.min;
-//   while (minPointer <= srcRange.max) {
-//     const matchingRange = mappings.find(
-//       (range) => minPointer >= range.min && minPointer <= range.max
-//     );
-//     if (!matchingRange) {
-//       const nextRange = mappings.find((range) => minPointer < range.min);
-//       if (!nextRange) {
-//         newRanges.push({ min: minPointer, max: srcRange.max });
-//         minPointer = srcRange.max + 1;
-//       } else {
-//         const rangeMax = nextRange.min - 1;
-//         newRanges.push({ min: minPointer, max: rangeMax });
-//         minPointer = rangeMax + 1;
-//       }
-//     } else {
-//       const offset = matchingRange.offset;
-//       const rangeMax = Math.min(matchingRange.max, srcRange.max);
-//       newRanges.push({ min: minPointer + offset, max: rangeMax + offset });
-//       minPointer = rangeMax + 1;
-//     }
-//   }
-//   return newRanges;
-// };
