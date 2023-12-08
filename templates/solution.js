@@ -1,5 +1,6 @@
 const fs = require("fs");
-const filePath = "input.txt";
+// const filePath = "input.txt";
+const filePath = "testInput.txt";
 
 fs.readFile(filePath, "utf8", (err, data) => {
   const input = data.split("\n");
