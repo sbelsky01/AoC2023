@@ -52,7 +52,7 @@ const part2 = (input) => {
       }
       return steps;
     })
-    .reduce((a, b) => lcm(a, b));
+    .reduce(lcm);
 };
 
 const lcm = (a, b) => (a * b) / gcd(a, b);
